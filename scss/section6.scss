@@ -1,0 +1,106 @@
+.section6-title {
+    color: $coltext2;
+    font-size: 48px;
+    font-weight: $fw_semibold;
+    text-transform: uppercase;
+    padding: 90px 0px 125px;
+}
+.section6-cards {
+    @extend %flex-around-center;
+    flex-wrap: wrap;
+    position: relative;
+}
+.section6-card {
+    @extend %flex-col;
+    padding-bottom: 123px;
+    width: 275px;
+}
+.section6-link {
+    color: $coltext2;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 40px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: $fw_semibold;
+    padding: 35px 0px 22px;
+        &:hover {
+            color: #ff3000;
+            text-decoration: underline;
+        }
+}
+.section6-text {
+    max-width: 321px;
+    color: $coltext10;
+    font-size: 18px;
+    font-weight: $fw_semibold;
+    text-align: center;
+}
+.section6-right {
+    position: relative;
+    top: -135px;
+}
+.section6-right__320 {
+    display: none;
+}
+.section6-link2 {
+color: $coltext2;
+font-size: 18px;
+font-weight: $fw_semibold;
+line-height: 26px;
+    &:hover {
+        color: #ff3000;
+        text-decoration: underline;
+        text-transform: uppercase;
+    }
+}
+.section6-right__third {
+    display: none;
+}
+@media (max-width: 1210px) {
+    .section6-title {
+        text-align: center;
+    }
+}
+@media (max-width: 908px) {
+    .section6-card {
+        min-width: 290px;
+    }
+    .section6-right__two {
+        display: none;
+    }
+    .section6-right__third {
+        display: block;
+    }
+    .section6-right__fourth {
+        display: none;
+    }
+}
+@media (max-width: 767px) {
+    .section6-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+    .section6-card {
+        padding-bottom: 55px;
+    }
+    .section6-title {
+        font-size: 30px;
+        padding: 45px 0px 55px;
+    }
+    .section6-text {
+        max-width: 500px;
+    }
+    .section6-right__320 {
+        display: inline-block;
+        vertical-align: middle;
+        padding-bottom: 55px;
+    }
+    .section6-right {
+        display: none;
+    }
+    .section6-link {
+        padding: 20px 0px;
+    }
+}
+

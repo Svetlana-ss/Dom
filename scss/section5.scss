@@ -1,0 +1,81 @@
+.section5 {
+    background-image: url("../images/house.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    background-attachment: fixed;
+    background-position: center;
+}
+.form {
+    background: rgba(43, 45, 47, 0.8);
+    @extend %flex-col;
+}
+.form-calc {
+    @extend %flex-col;
+}
+.form-img {
+    padding: 76px 0px 38px;
+}
+.form-calc__title {
+    max-width: 568px;
+    color: $coltext1;
+    font-size: 48px;
+    font-weight: $fw_semibold;
+    text-transform: uppercase;
+    margin-bottom: 57px;
+}
+.form-calc__content {
+    max-width: 568px;
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 18px;
+    border: none;
+    border-radius: 4px;
+    &:hover {
+        transform: scale(1.02, 1.02);
+        transition-duration: 0.3s;
+        cursor: pointer;
+    }
+}
+.form-calc__btn {
+    max-width: 568px;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 95px;
+    color: $coltext1;
+    font-size: 34px;
+    line-height: 20px;
+    text-transform: uppercase;
+    padding: 18px 0px;
+    text-align: center;
+    border: none;
+    border-radius: 4px;
+    box-shadow: $btnshadow;
+    background-image: $btn_bg;
+    &:hover {
+        transform: scale(1.1, 1.1);
+        transition-duration: 0.3s;
+        cursor: pointer;
+    }
+}
+@media (max-width: 767px) {
+    .form-img {
+        padding: 45px 0px 30px;
+    }
+    .form-calc__title {
+        max-width: 280px;
+        text-align: center;
+        font-size: 30px;
+        margin-bottom: 25px;
+    }
+    .form-calc__content {
+        margin-bottom: 12px;
+        padding: 12px;
+    }
+    .form-calc__btn {
+        margin-bottom: 55px;
+        font-size: 25px;
+        line-height: 13px;
+        padding: 16px 0px;
+    }
+}

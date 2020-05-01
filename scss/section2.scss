@@ -1,0 +1,41 @@
+.section-title2 {
+    color: $coltext3;
+    padding: 78px;
+}
+.card2 {
+    padding-bottom: 107px;
+}
+.section-card__text2 {
+    color: $coltext5;
+    font-size: 24px;
+    line-height: 40px;
+    text-transform: uppercase;
+    text-shadow: none;
+    padding-bottom: 36px;
+}
+.section-card__price2 {
+    color: $coltext4;
+    font-size: 18px;
+    text-align: center;
+    font-weight: 600;
+    min-width: 237px;
+}
+.video {
+    width: 100%;
+    height: auto;
+    max-height: 100%;
+}
+@media (max-width: 1210px) {
+    .section-card__price2 {
+        max-width: 240px;
+    }
+}
+@media (max-width: 767px) {
+    .section-title2 {
+        padding: 40px 0px 25px;
+        font-size: 30px;
+    }
+    .card2 {
+        padding-bottom: 40px;
+    }
+}

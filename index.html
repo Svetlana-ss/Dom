@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dom-D</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,600,700,800&display=swap&subset=cyrillic,cyrillic-ext,latin-ext" rel="stylesheet">
+    <link rel="stylesheet" href="scss/style.scss">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="libss/animate/animate.css">
+    <link rel="stylesheet" href="libss/font-awesome-4.6.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="libss/owl-carousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="libss/owl-carousel/owl.theme.default.min.css">
+</head>
+<body>
+    <header class="top">
+        <div class="top2-scroll">
+            <a href="#">
+                <div class="mouse-scroll">
+                    <div class="mouse">
+                        <div class="mouse-in"></div>
+                    </div>
+                    <div>
+                        <span class="down-arrow-1"></span>
+                        <span class="down-arrow-2"></span>
+                        <span class="down-arrow-3"></span>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="leafs">
+            <div class="top1">
+                <div class="container top1-disp">
+                    <div class="top1-logo">
+                        <span class="top1-logo__text">ДОМ-Д</span>
+                    </div>
+                    <div class="top1-menu">
+                        <ul class="top1-spisok">
+                            <li class="top1-list"><a href="#" class="top1-link">проекты</a></li>
+                            <li class="top1-list"><a href="#" class="top1-link">Виды стрительства</a></li>
+                            <li class="top1-list"><a href="#" class="top1-link">этапы</a></li>
+                            <li class="top1-list"><a href="#" class="top1-link">Отзывы</a></li>
+                            <li class="top1-list"><a href="#" class="top1-link">Контакты</a></li>
+                        </ul>
+                    </div>
+                    <div class="top1-form">
+                        <div class="top1-contacts">
+                            <p class="top1-phones">(098) <span class="top1-phones__bold"> 271-50-35</span></p>
+                            <p class="top1-phones">(048) <span class="top1-phones__bold"> 700-60-55</span></p>
+                        </div>
+                        <div class="top1-call" id="call">
+                            <button class="top1-click">
+                                <a href="#" class="top1-click__link" onclick="openForm()">Перезвонить мне</a>
+                            </button>
+                        </div>
+                        <div class="form-popup" id="myForm">
+                            <form class="form-container">
+                              <h1 class="form-title">Укажите Ваши данные</h1>
+                              <label class="form-name" for="name"><b>Имя</b></label>
+                              <input  class="form-content" type="text" placeholder="Enter Name" name="name" required>
+                              <label class="form-name" for="psw"><b>Телефон</b></label>
+                              <input class="form-content" type="phone" placeholder="Enter Phone_number" name="phone" required>
+                              <button type="submit" class="btn">Заказать звонок</button>
+                              <button type="submit" class="btn cancel" onclick="closeForm()">Отмена</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="top2">
+                <div class="container">
+                    <div class="top2-services">
+                        <h1 class="top2-title">Компания <span class="top2-title top2-title__bold">Дом-Д</span></h1>
+                        <div class="top2-content">
+                            <span class="top2-text">Строительство деревянных домов «под ключ»:</span>
+                            <span class="top2-text"> коттеджи, беседки, бани, дома из клееного бруса</span>
+                        </div>
+                    </div>
+                    <div class="top2-form">
+                        <form class="form-container">
+                            <input  class="form-content" type="text" placeholder="Имя" name="name" required>
+                            <input class="form-content" type="phone" placeholder="Телефон" name="phone" required>
+                            <button type="submit" class="btn">Расчитать <span class="btn__bold">бесплатно</span></button>
+                          </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="top-container">
+            <div class="to-top">
+                <a href="#" class="to-top__btn">
+                    <img src="images/to_top.png" alt="top">
+                </a>
+            </div>
+        </div>
+    </header>
+    <main class="middle">
+        <sections class="sections">
+            <section class="section1">
+                <h2 class="section-title">Виды строительства</h2>
+                <p class="section-text">Доступные материалы</p>
+                <div class="section-cards">
+                    <div class="section-card">
+                        <img src="images/karkasdom.png" alt="karkasdom" class="section-pic">
+                        <span class="section-card__text">Каркасные дома</span>
+                        <span class="section-card__price">350 грн /1м2</span>
+                        <button class="section-card__btn"><a href="#" class="section-card__link">Подробнее →</a></button>
+                    </div>
+                    <div class="section-card">
+                        <img src="images/brus.png" alt="brus" class="section-pic">
+                        <span class="section-card__text">Из клеенного бруса</span>
+                        <span class="section-card__price">360 грн /1м2</span>
+                        <button class="section-card__btn"><a href="#" class="section-card__link">Подробнее →</a></button>
+                    </div>
+                    <div class="section-card">
+                        <img src="images/besedka.png" alt="besedka" class="section-pic">
+                        <span class="section-card__text">Беседка</span>
+                        <span class="section-card__price">370 грн /1м2</span>
+                        <button class="section-card__btn"><a href="#" class="section-card__link">Подробнее →</a></button>
+                    </div>
+                </div>
+                <div class="free-calc">
+                    <div class="container">
+                        <div class="free-calc__center">
+                            <span class="free-calc__text">Вы можете <span class="free-calc__bold">БЕСПЛАТНО</span> заказать расчет своего объекта</span>
+                            <button class="free-calc__btn"><span class="free-calc__btn-bold">Бесплатный</span> расчет</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section2">
+                <h3 class="section-title section-title2">Наши преимущества</h3>
+                <div class="container">
+                    <div class="section-cards">
+                        <div class="section-card card2">
+                            <img src="images/ecolog.png" alt="ecolog" class="section-pic">
+                            <span class="section-card__text section-card__text2">Экологичность</span>
+                            <span class="section-card__price2">Дом строится из натуральных материалов</span>
+                        </div>
+                        <div class="section-card card2">
+                            <img src="images/quolity.png" alt="quolity" class="section-pic">
+                            <span class="section-card__text  section-card__text2">Качество</span>
+                            <span class="section-card__price2">Идеальное соотношение ЦЕНА-КАЧЕСТВО</span>
+                        </div>
+                        <div class="section-card card2">
+                            <img src="images/dolgove4nost.png" alt="dolgove4nost" class="section-pic">
+                            <span class="section-card__text  section-card__text2">Долговечность</span>
+                            <span class="section-card__price2">Персональных подход к каждому заказчику</span>
+                        </div>
+                        <div class="section-card card2">
+                            <img src="images/price.png" alt="price" class="section-pic">
+                            <span class="section-card__text  section-card__text2">Цена</span>
+                            <span class="section-card__price2">Персональных подход к каждому заказчику</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="section-video">
+                    <video class="video" controls src="video/home.mp4"></video>
+                </div>
+            </section>
+            <section class="section3">
+                <h4 class="section-title section-title3">Наши работы</h4>
+                <div class="section3-cards">
+                    <div class="section-card section3-card">
+                        <img src="images/foto1.png" alt="foto1" class="section-img">
+                        <span class="section3-card__text">Строительство каркасных домов SIP панели</span>
+                        <button class="section3-card__btn"><a href="#" class="section-card__link">Подробнее →</a></button>
+                    </div>
+                    <div class="section-card section3-card">
+                        <img src="images/foto2.png" alt="foto2" class="section-img">
+                        <span class="section3-card__text">Строительство каркасных домов SIP панели</span>
+                        <button class="section3-card__btn"><a href="#" class="section-card__link">Подробнее →</a></button>
+                    </div>
+                    <div class="section-card section3-card">
+                        <img src="images/foto3.png" alt="foto3" class="section-img">
+                        <span class="section3-card__text">Строительство каркасных домов SIP панели</span>
+                        <button class="section3-card__btn"><a href="#" class="section-card__link">Подробнее →</a></button>
+                    </div>
+                    <div class="section-card section3-card">
+                        <img src="images/foto4.png" alt="foto4" class="section-img">
+                        <span class="section3-card__text">Строительство каркасных домов SIP панели</span>
+                        <button class="section3-card__btn"><a href="#" class="section-card__link">Подробнее →</a></button>
+                    </div>
+                    <div class="section-card section3-card">
+                        <img src="images/foto5.png" alt="foto5" class="section-img">
+                        <span class="section3-card__text">Строительство каркасных домов SIP панели</span>
+                        <button class="section3-card__btn"><a href="#" class="section-card__link">Подробнее →</a></button>
+                    </div>
+                    <div class="section-card section3-card">
+                        <img src="images/foto6.png" alt="foto6" class="section-img">
+                        <span class="section3-card__text">Строительство каркасных домов SIP панели</span>
+                        <button class="section3-card__btn"><a href="#" class="section-card__link">Подробнее →</a></button>
+                    </div>
+                    <div class="section3-more2" id="more">
+                        <div class="section-card section3-card">
+                            <img src="images/foto1.png" alt="foto1" class="section-img">
+                            <span class="section3-card__text">Строительство каркасных домов SIP панели</span>
+                            <button class="section3-card__btn"><a href="#" class="section-card__link">Подробнее →</a></button>
+                        </div>
+                        <div class="section-card section3-card">
+                            <img src="images/foto2.png" alt="foto2" class="section-img">
+                            <span class="section3-card__text">Строительство каркасных домов SIP панели</span>
+                            <button class="section3-card__btn"><a href="#" class="section-card__link">Подробнее →</a></button>
+                        </div>
+                        <div class="section-card section3-card">
+                            <img src="images/foto3.png" alt="foto3" class="section-img">
+                            <span class="section3-card__text">Строительство каркасных домов SIP панели</span>
+                            <button class="section3-card__btn"><a href="#" class="section-card__link">Подробнее →</a></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="section3-more">
+                    <a class="section3-more__link" onclick="showImg()" >Еще проекты</a>
+                </div>
+            </section>
+            <section class="section4">
+                <h5 class="section-title section-title4">Отзывы заказчиков</h5>
+                <div id="testimonials">
+                    <div class="container">
+                        <div class="block-one-example">
+                            <div id="customNav" class="owl-my-nav"></div>
+                            <div class="owl-carousel slide-one">
+                                <div class="item">
+                                    <div class="slider__item slider__item_1">
+                                        <div class="slider__item_inner">
+                                            <span class="slider__item_img">
+                                                <img class="slider__item_photo" src="images/slider1.png" alt="slider1">
+                                            </span>
+                                            <span class="slider__item_testimonial">
+                                                <span class="slider__item_text">Изначально принял решение строить дом из деревянного бруса. Брус отличного качества, лично проверял. Меня все устроило и решил строить в Дом-Д. Я остался очень доволен постройкой своего нового дома. Жене также дом очень понравился. </span>
+                                                <span class="slider__item_name">Дмитрий Селезнев</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="slider__item slider__item_2">
+                                        <div class="slider__item_inner">
+                                            <span class="slider__item_img">
+                                                <img class="slider__item_photo" src="images/slider1.png" alt="slider1">
+                                            </span>
+                                            <span class="slider__item_testimonial">
+                                                <span class="slider__item_text">Изначально принял решение строить дом из деревянного бруса. Брус отличного качества, лично проверял. Меня все устроило и решил строить в Дом-Д. Я остался очень доволен постройкой своего нового дома. Жене также дом очень понравился. </span>
+                                                <span class="slider__item_name">Дмитрий Селезнев</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="slider__item slider__item_2">
+                                        <div class="slider__item_inner">
+                                            <span class="slider__item_img">
+                                                <img class="slider__item_photo" src="images/slider1.png" alt="slider1">
+                                            </span>
+                                            <span class="slider__item_testimonial">
+                                                <span class="slider__item_text">Изначально принял решение строить дом из деревянного бруса. Брус отличного качества, лично проверял. Меня все устроило и решил строить в Дом-Д. Я остался очень доволен постройкой своего нового дома. Жене также дом очень понравился. </span>
+                                                <span class="slider__item_name">Дмитрий Селезнев</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="slider__item slider__item_2">
+                                        <div class="slider__item_inner">
+                                            <span class="slider__item_img">
+                                                <img class="slider__item_photo" src="images/slider1.png" alt="slider1">
+                                            </span>
+                                            <span class="slider__item_testimonial">
+                                                <span class="slider__item_text">Изначально принял решение строить дом из деревянного бруса. Брус отличного качества, лично проверял. Меня все устроило и решил строить в Дом-Д. Я остался очень доволен постройкой своего нового дома. Жене также дом очень понравился. </span>
+                                                <span class="slider__item_name">Дмитрий Селезнев</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>		
+                </div>
+            </section>
+            <section class="section5">
+                <div class="form">
+                    <img src="images/form.png" alt="house" class="form-img">
+                    <div class="form-calc">
+                        <span class="form-calc__title">Бесплатный просчет</span>
+                        <input  class="form-calc__content" type="text" placeholder="Имя" name="name" required>
+                        <input class="form-calc__content" type="phone" placeholder="Телефон" name="phone" required>
+                        <button type="submit" class="form-calc__btn">Заказать</button>
+                    </div>
+                </div>
+            </section>
+            <section class="section6">
+                <div class="container">
+                    <h6 class="section6-title">Этапы строительства</h6>
+                    <div class="section6-cards">
+                        <div class="section6-card">
+                            <img src="images/1.png" alt="1" class="section6-img">
+                            <a href="#" class="section6-link">Заявка</a>
+                            <span class="section6-text">Вы оставляете заявку на сайте</span>
+                            <a href="#" class="section6-link2">Подать заявку</a>
+                        </div>
+                        <img src="images/right_stages.png" alt="right_stages" class="section6-right">
+                        <img src="images/right_stages — 320.png" alt="right_stages" class="section6-right__320">
+                        <div class="section6-card">
+                            <img src="images/2.png" alt="2" class="section6-img">
+                            <a href="#" class="section6-link">Осмотр участка</a>
+                            <span class="section6-text">Наш менеджер связывается с вами и согласовывает времы выезда на участок</span>
+                        </div>
+                            <img src="images/right_stages.png" alt="right_stages" class="section6-right section6-right__two">
+                            <img src="images/right_stages — 320.png" alt="right_stages" class="section6-right__320">
+                        <div class="section6-card">
+                            <img src="images/3.png" alt="3" class="section6-img">
+                            <a href="#" class="section6-link">Проект</a>
+                            <span class="section6-text">Наш специалист составляет проект исмету</span>
+                        </div>
+                        <img src="images/right_stages.png" alt="right_stages" class="section6-right section6-right__third">
+                        <img src="images/right_stages — 320.png" alt="right_stages" class="section6-right__320">
+                        <div class="section6-card">
+                            <img src="images/4.png" alt="4" class="section6-img">
+                            <a href="#" class="section6-link">Договор</a>
+                            <span class="section6-text">Согласовываем, подписываем договор и запускаем производство бруса</span>
+                        </div>
+                        <img src="images/right_stages.png" alt="right_stages" class="section6-right section6-right__fourth">
+                        <img src="images/right_stages — 320.png" alt="right_stages" class="section6-right__320">
+                        <div class="section6-card">
+                            <img src="images/5.png" alt="5" class="section6-img">
+                            <a href="#" class="section6-link">Фундамент</a>
+                            <span class="section6-text">Закладываем фундамент, производим сборку на участке, закрываем крышу, устанавливаем окна и двери</span>
+                        </div>
+                        <img src="images/right_stages.png" alt="right_stages" class="section6-right">
+                        <img src="images/right_stages — 320.png" alt="right_stages" class="section6-right__320">
+                        <div class="section6-card">
+                            <img src="images/6.png" alt="6" class="section6-img">
+                            <a href="#" class="section6-link">Сдача дома</a>
+                            <span class="section6-text">Показываем готовый объект заказчику. Дом готов.</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section7">
+                <div class="container">
+                    <p class="section7-title">Сертификаты</p>
+                    <div id="testimonials">
+                        <div class="container">
+                            <div class="block-one-example">
+                                <div id="customNav-two" class="owl-my-nav">
+                                </div>
+                                <div class="owl-carousel owl-theme slide-two">
+                                    <div class="owl-stage-outer">
+                                        <div class="owl-stage">
+                                            <div class="owl-item">
+                                                <div class="item">
+                                                    <div class="slider__item slider__item-two">
+                                                        <div class="slider__item_inner slider__item_inner_two">
+                                                            <img src="images/active.png" alt="passive" class="slider__item_two">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="owl-stage-outer">
+                                        <div class="owl-stage">
+                                            <div class="owl-item">
+                                                <div class="item">
+                                                    <div class="slider__item slider__item-two">
+                                                        <div class="slider__item_inner slider__item_inner_two">
+                                                            <img src="images/active.png" alt="passive" class="slider__item_two">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="owl-stage-outer">
+                                        <div class="owl-stage">
+                                            <div class="owl-item">
+                                                <div class="item">
+                                                    <div class="slider__item slider__item-two">
+                                                        <div class="slider__item_inner slider__item_inner_two">
+                                                            <img src="images/active.png" alt="passive" class="slider__item_two">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="owl-stage-outer">
+                                        <div class="owl-stage">
+                                            <div class="owl-item">
+                                                <div class="item">
+                                                    <div class="slider__item slider__item-two">
+                                                        <div class="slider__item_inner slider__item_inner_two">
+                                                            <img src="images/active.png" alt="passive" class="slider__item_two">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="owl-stage-outer">
+                                        <div class="owl-stage">
+                                            <div class="owl-item">
+                                                <div class="item">
+                                                    <div class="slider__item slider__item-two">
+                                                        <div class="slider__item_inner slider__item_inner_two">
+                                                            <img src="images/active.png" alt="passive" class="slider__item_two">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>		
+                    </div>
+                </div>
+            </section>
+            <section class="section8">
+                <div class="container">
+                    <p class="section8-title">Партнеры</p>
+                    <div class="section8-imgs">
+                        <img src="images/img_1.png" alt="img_1" class="section8-img">
+                        <img src="images/img_2.png" alt="img_2" class="section8-img">
+                        <img src="images/img_3.png" alt="img_3" class="section8-img">
+                        <img src="images/img_4.png" alt="img_4" class="section8-img">
+                        <img src="images/img_5.png" alt="img_5" class="section8-img">
+                    </div>
+                </div>
+            </section>
+        </sections>
+    </main>
+    <footer class="contacts">
+        <div class="contacts-map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2747.9906808153337!2d30.711773315843573!3d46.46869257387562!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c632271e4b7ab7%3A0xe1de57176e9a20e6!2z0JrQvtC80LjRgtC10YLRgdC60LDRjyDRg9C7LiwgMjQsINCe0LTQtdGB0YHQsCwg0J7QtNC10YHRgdC60LDRjyDQvtCx0LvQsNGB0YLRjCwgNjUwMDA!5e0!3m2!1sru!2sua!4v1586083074709!5m2!1sru!2sua" width="100%" height="500" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        </div>
+        <div class="contacts-all">
+            <div class="container">
+                <div class="contacts-wrap">
+                    <div class="contacts-wrap1">
+                        <div class="contacts-info">
+                            <p class="contacts-title">Контакты</p>
+                            <span class="contacts-adress">Украина, г. Одесса</span>
+                            <span class="contacts-adress">ул. Комитетская, 24Б</span>
+                            <span class="contacts-adress">Эл.почта: <a href="#" class="contacts-adress__link">dom-d@i.ua</a></span>
+                        </div>
+                        <div class="contacts-phones">
+                            <p class="contacts-phone"><span class="contacts-phone__fw600"> (048)</span> 700-60-55</p>
+                            <p class="contacts-phone"><span class="contacts-phone__fw600"> (098)</span> 271-50-35</p>
+                            <button class="contacts-click">
+                                <a href="#" class="contacts-click__link">Перезвонить мне</a>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="contacts-wrap2">
+                        <form class="contacts-form">
+                            <span class="contacts-form__title">Задать вопрос</span>
+                            <input  class="contacts-content" type="text" placeholder="Имя" name="name" required>
+                            <input class="contacts-content" type="phone" placeholder="Телефон" name="phone" required>
+                            <textarea class="contacts-area" name="question" placeholder="Ваш вопрос"></textarea>
+                            <button type="submit" class="contacts-btn">Отправить</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-menu">
+            <div class="container">
+                <div class="footer-wrap">
+                    <div class="top1-menu">
+                        <ul class="top1-spisok">
+                            <li class="top1-list"><a href="#" class="top1-link footer-link">наши проекты</a></li>
+                            <li class="top1-list"><a href="#" class="top1-link footer-link">Виды стрительства</a></li>
+                            <li class="top1-list"><a href="#" class="top1-link footer-link">этапы</a></li>
+                            <li class="top1-list"><a href="#" class="top1-link footer-link">Отзывы</a></li>
+                        </ul>
+                    </div>
+                    <div class="dev">
+                        <p class="dev-text">
+                            2016.  Разработка и поддержка сайта — <a href="#" class="dev-link">Look<span class="dev-link__color">up</span></a> 
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="js/works.js"></script>
+    <script src="libss/jquery/jquery-2.1.3.min.js"></script>
+    <script src="libss/owl-carousel/owl.carousel.min.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="js/popup.js"></script>
+</body>
+</html>
+ 

@@ -1,0 +1,66 @@
+.form-popup {
+    display: none;
+    top: 2%;
+    right: 1%;
+    left: 64%;
+    background-color: #131725;
+    box-shadow: 0 0 18px 6px rgba(44%, 80%, 55%, 0.9);
+    z-index: 9;
+    min-width: 279px;
+    position: absolute;
+    .form-container {
+        padding: 10px;
+        @extend %flex-col;
+        &:focus {
+            outline: none; 
+          }
+        .form-title {
+            font-size: 22px;
+            font-weight: 600;
+            text-transform: uppercase;
+            padding: 10px 15px;
+            text-align: center;
+            color: $coltext1;
+        }
+        .form-content {
+            width: 100%;
+            padding: 15px;
+            margin: 5px 0 22px 0;
+            border: none;
+            cursor: pointer;
+          }
+        .form-name {
+            padding-left: 15px;
+            color: $coltext1;
+        }
+        .btn {
+            font-family: 'Open Sans', sans-serif;
+            color: #131725;
+            padding: 16px 20px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            margin-bottom:10px;
+            opacity: 0.8;
+            font-weight: 600; 
+            &:hover {
+                opacity: 1;
+            }
+          }
+        .cancel {
+          background-image: linear-gradient(to top, #9cd811 0%, #bccf65 100%);
+        }
+      }
+}
+@media (max-width:1210px) {
+  .form-popup {
+    left: 42%;
+  }
+}
+@media (max-width: 767px) {
+  .form-popup {
+      top: 5%;
+      left: 5%;
+      right: 5%;
+  }
+}
