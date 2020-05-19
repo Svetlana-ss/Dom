@@ -24,10 +24,38 @@
     width: 100%;
     height: auto;
     max-height: 100%;
+    object-fit: cover;
+}
+.section-video {
+    position: relative;
+}
+.over {
+    position: absolute;
+    top: 32%;
+    left: 43%;
+    width: 200px;
+    height: 200px;
+    z-index: 10;
+    background: url('../images/over_1211.png') 50% 50% no-repeat; 
+    opacity: 0.8;
+    &:hover {
+        cursor: pointer;
+        transform: scale(1.2);
+        transition-duration: 0.3s;
+    }
+}
+.over.o {
+    background: none;
 }
 @media (max-width: 1210px) {
     .section-card__price2 {
         max-width: 240px;
+    }
+    .over {
+        background: url('../images/over.png') 50% 50% no-repeat; 
+        width: 150px;
+        height: 150px;
+        
     }
 }
 @media (max-width: 767px) {
@@ -37,5 +65,10 @@
     }
     .card2 {
         padding-bottom: 40px;
+    }
+    .over {
+        background: url('../images/over_320.png') 50% 50% no-repeat; 
+        width: 50px;
+        height: 50px;
     }
 }

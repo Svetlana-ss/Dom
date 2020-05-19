@@ -1,12 +1,9 @@
-.mouse-scroll {
-    display: block;
-    position: fixed;
-    margin: auto;
-    left: 50%;
-    top: 55%;
-    transform: translateX(-50%);
-    z-index: 9999;
-  }
+.top2-scroll {
+  position: absolute;
+  top: 82%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 .down-arrow-1, .down-arrow-2, .down-arrow-3 {
     display: block;
     width: 5px; 
@@ -27,7 +24,6 @@
     -ms-transform: none;
     transform: none;
     border: 2px solid #ffffff;
-    top: 170px;
 }
 .down-arrow-1 {
     margin-top: 6px;
@@ -54,39 +50,50 @@
     position: relative;
     animation: animated-mouse 1.2s ease infinite;
   }
-  @keyframes animated-mouse {
-    0% {
-      opacity: 1;
-      transform: translateY(0);
-    }
-    100% {
-       opacity: 0;
-      transform: translateY(6px);
-    }
-  }
-  @keyframes mouse-scroll {
-    0% {
-      opacity: 1;
-    }
-    50% {
-      opacity: .5;
-    }
-    100% {
-      opacity: 1;
-    } 
-  }
-  @keyframes mouse-scroll {
-    0% {
-      opacity: 0;
-    }
-    50% {
-      opacity: 0.5;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
   .to-top__btn {
     cursor: pointer;
     border-radius: 50%;
   }
+@media (max-width:767px) {
+  .top2-scroll {
+    position: absolute;
+    top: 94%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .top2-form {
+    padding-bottom: 230px;
+  }
+}
+@keyframes animated-mouse {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+      opacity: 0;
+    transform: translateY(6px);
+  }
+}
+@keyframes mouse-scroll {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: .5;
+  }
+  100% {
+    opacity: 1;
+  } 
+}
+@keyframes mouse-scroll {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}

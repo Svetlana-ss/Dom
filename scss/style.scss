@@ -21,7 +21,7 @@
 @import 'section6';
 @import 'section7';
 @import 'section8';
-@import 'footer';
+@import 'footer'; 
 
 * {
     box-sizing: border-box;
@@ -40,6 +40,11 @@ body {
     display: flex;
     justify-content: space-around;
     align-items: center;
+}
+%flex-around-base {
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
 }
 %flex-center-center {
     display: flex;

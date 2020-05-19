@@ -1,6 +1,8 @@
-@import 'popupform';
 @import 'scroll';
-
+.slicknav_menu {
+    display: none;
+    background: url("../images/bgsection1.png");
+}
 .top {
     background-image: url("../images/top_pic.png");
     background-repeat: no-repeat;
@@ -34,7 +36,9 @@
     font-weight: $fw_semibold;
     line-height: 47px;
     text-transform: uppercase;
-    @extend %flex-around-center;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
 }
 .top1-link {
     color: $coltext1;
@@ -52,8 +56,12 @@
         padding-right: 0px;
     }
 }
+.top1-list2 {
+    max-width: 190px;
+    padding-right: 0px;
+}
 .top1-disp  {
-    @extend %flex-around-center;
+    @extend %flex-around-base;
     padding-top: 23px;
     padding-bottom: 16px;
 }
@@ -93,14 +101,27 @@
     color: $coltext1;
     padding: 0px 30px;
 }
+.top1-spisok2 {
+    display: none;
+    position: relative;
+    font-weight: 500;
+} 
+.top1-list:hover {
+    .top1-spisok2 {
+        display: block;
+    }
+}
+.top1-link:active {
+    .top1-spisok2 {
+        display: block;
+    }
+}
+.top1-link2 {
+    font-size: 11px;
+}
 .top2-services {
     animation: move 2s; 
   animation-direction: normal;
-}
-
-@keyframes move {
-    from {  transform: translateX(120px); }
-  to {  transform: translateX(0px); }
 }
 .top2-title {
     color: $coltext14;
@@ -128,7 +149,7 @@
     margin-top: 10px;
     margin-left: 40px;
 }
-.form-container {
+.form1-container {
     padding: 40px 10px;
     width: 100%;
     box-shadow: $formten;
@@ -194,8 +215,73 @@
 .btn.cansel {
     background-image: linear-gradient(to top, #9cd811 0%, #bccf65 100%);
 }
+//popup
 
+.form-popup {
+    background-color: #131725;
+    box-shadow: 0 0 18px 6px rgba(44%, 80%, 55%, 0.9);
+    z-index: 9;
+    min-width: 50%;
+    left: 25%;
+    position: absolute;
+    .form-container {
+        padding: 25px;
+        @extend %flex-col;
+        &:focus {
+            outline: none; 
+          }
+        .form-title {
+            font-size: 22px;
+            font-weight: 600;
+            text-transform: uppercase;
+            padding: 10px 15px;
+            text-align: center;
+            color: $coltext1;
+        }
+        .form-content {
+            width: 100%;
+            padding: 15px;
+            margin: 5px 0 22px 0;
+            border: none;
+            cursor: pointer;
+          }
+        .form-name {
+            padding-left: 15px;
+            color: $coltext1;
+        }
+        .btn {
+            font-family: 'Open Sans', sans-serif;
+            color: #131725;
+            padding: 16px 20px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            margin-bottom:10px;
+            opacity: 0.8;
+            font-weight: 600; 
+            &:hover {
+                opacity: 1;
+            }
+          }
+      }
+}
+.mfp-close-btn-in {
+    .mfp-close {
+        color: #fff;
+        font-size: 38px;
+    }
+}
+@keyframes move {
+    from {  transform: translateX(120px); }
+  to {  transform: translateX(0px); }
+}
 @media (max-width:1210px) {
+    .top1-contacts {
+        display: flex;
+    }
+    .top1-phones {
+        padding: 0px 20px;
+    }
     .top1-disp {
         flex-wrap: wrap;
     }
@@ -207,7 +293,7 @@
     .top2-content {
         padding: 20px;
     }
-    .form-container {
+    .form1-container {
         padding: 20px 10px;
         justify-content: space-around;
     }
@@ -225,6 +311,38 @@
     }
 }
 @media (max-width:767px) {
+    .top1-menu {
+        display: none;
+    }
+    .slicknav_menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        background-attachment: fixed;
+    }
+    .slicknav_nav li, .slicknav_nav ul {
+        text-align: center;
+    }
+    .top1-link {
+        font-size: 18px;
+        font-weight: 800;
+    }
+    .top1-link2 {
+        font-size: 14px;
+        font-weight: 600;
+    }
+    .form1-container {
+        flex-direction: column;
+    }
+    .top1-contacts {
+        display: flex;
+        flex-direction: column;
+    }
+    .slicknav_btn {
+        background-image: linear-gradient(to top, #28bc04 0%, #54e129 100%);
+        box-shadow: 0 3px 7px rgba(0, 0, 0, 0.35), inset 0 -4px 0 rgba(0, 0, 0, 0.35);
+    }
     .top1-logo {
         font-size: 28px;
         line-height: 45px;
@@ -236,6 +354,7 @@
     }
     .top1-list {
         padding-right: 12px;
+        min-width: 252px;
     }
     .top1-menu {
         padding: 0px 10px;
@@ -270,8 +389,11 @@
         font-size: 32px;
     }
     .form-container {
+        display: flex;
         flex-direction: column;
         align-items: center;
+        box-shadow: $formten;
+        background-color: rgba($color: #2f0f02, $alpha: 0.9);
     }
     .form-content {
         line-height: 16px;
@@ -281,6 +403,10 @@
     }
     .top2-form {
         margin-top: 32px;
-        padding-bottom: 80px;
+        padding-bottom: 105px;
+    }
+    .form-popup {
+        left: 5%;
+        right: 5%;
     }
 }
